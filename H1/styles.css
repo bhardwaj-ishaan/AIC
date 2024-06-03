@@ -1,0 +1,29 @@
+html{
+    font-family: 'Dekko', 'Arial', 'Sans-Serif';
+    background-color: #A7E6FF;
+    color: #3572EF;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    border-bottom: 1px solid seashell;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Salsa', 'Arial', 'Sans-Serif';
+    flex-grow: 1;
+}
+
+nav a{
+    padding: 5px;
+}
+
+main{
+    text-align: center;
+}
+
+p{
+    font-size: 1.2rem;
+}
