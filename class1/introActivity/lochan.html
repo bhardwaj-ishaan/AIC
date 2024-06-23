@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lochan's About Me</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1 class="section">
+        About Me
+    </h1>
+    <br>
+    <div class="section">
+        My name is Lochan, and that's what everyone calls me. I'm 16 and a rising senior. 
+        I like driving, listening to music, and hanging out with friends.
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="section">
+        Tech Stuff
+    </h1>
+    <br>
+    <div class="section">
+        I taught myself HTML and CSS, and I still learn new things managing 
+        different websites. As for coding languages, I know Python, C++, and 
+        Java. One of my favorite projects was a project for my math class when
+        I used Python to create an indefinite integral calculator. I'm really 
+        excited for this class and know it'll be fun!
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="section">
+        Form
+    </h1>
+    <br>
+    <form class="section" id="form" action="https://atdpsites.berkeley.edu/test.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="section">
+        <br>
+        <br>
+        <div>Favorite RGB Color:</div>
+        <input type="radio" id="red" name="Favorite Color" value="red">
+        <label style="color: red" class= "label" for="red">Red</label><br>
+        <input type="radio" id="green" name="Favorite Color" value="green">
+        <label style="color: green" class="label" for="green">Green</label><br>
+        <input type="radio" id="blue" name="Favorite Color" value="blue">
+        <label style="color: blue" class="label" for="blue">Blue</label>
+        <br>
+        <br>
+        <div>Favorite Subject:</div>
+        <input class="section" list="subjects" name="Favorite Subject">
+        <datalist class="section" id="subjects">
+            <option value="Math">
+            <option value="History">
+            <option value="English">
+            <option value="Biology">
+            <option value="Chemistry">
+            <option value="Physics">
+            <option value="Computer Science">
+            <option value="Other">
+        </datalist>
+        <br>
+        <br>
+        <div>Sports You Have Played:</div>
+        <input type="checkbox" id="bball" name="Sport" value="Basketball">
+        <label class="label" for="bball">Basketball</label>
+        <input type="checkbox" id="Soccer" name="Sport" value="Soccer">
+        <label class="label" for="Soccer">Soccer</label>
+        <input type="checkbox" id="Volleyball" name="Sport" value="Volleyball">
+        <label class="label" for="Volleyball">Volleyball</label>
+        <input type="checkbox" id="Swim" name="SSportwim" value="Swim">
+        <label class="label" for="Swim">Swim</label>
+        <input type="checkbox" id="tf" name="Sport" value="Track and Field">
+        <label class="label" for="tf">Track and Field</label>
+        <input type="checkbox" id="Football" name="Sport" value="Football">
+        <label class="label" for="Football">Football</label>
+        <input type="checkbox" id="Other" name="Sport" value="Other">
+        <label class="label" for="Other">Other</label>
+        <br>
+        <br>
+        <label for="quantity">Favorite Number (1-100):</label>
+        <input class="section" id="number" type="number" id="quantity" name="Favorite Number" min="1" max="100">
+        <br>
+        <br>
+        <div>What is your favorite TV Show of all time and why?</div>
+        <textarea class="section" id="form" name="Favorite Show" rows="2" cols="50"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

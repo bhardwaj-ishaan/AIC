@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = 'stylesheet' href = 'styles.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dekko&family=Salsa&display=swap" rel="stylesheet">
+        <title>H1: Your First Assignment</title>
+    </head>
+    <body>
+        <header>
+            <h1>H1: Your First Assignment</h1>
+            <nav>
+                <a href = "#me">About Me</a>
+                <a href = "#tech">Tech Me</a>
+                <a href = "#form">Form Me</a>
+            </nav>
+        </header>
+        <main>
+            <section id = "me">
+                <h2>About Me</h2>
+                <img src = 'picture.png' width="200px" height="200px"/>
+                <p>My name is Ishaan. I am 13 years old and am a rising 9th Grader. I will be going to Mountain House High School. I like coding, drawing, biking, and competing in science competitions.</p>
+            </section>
+            <section id = "tech">
+                <h2>The Tech Me</h2>
+                <article id = "tech-des">
+                    <p>I have an intermediate level of experience with HTML and CSS. I started self studying in July of lest year, through a full-stack course on Codecademy. I took a break from January to April, as my Science Olympiad stuff was becoming more time-consuming. Other languages I know are a little Python and JS/ReactJS (specifically for game/app design). Something I coded that I am proud of is a recipe app on React. It's pretty simple, with just four screens which have three recipes each, but I am proud that I was able to dedicate time to doing something I love. In this course, I want to learn back-end development.</p>
+                </article>
+            </section>
+            <section id = "form">
+                <h2>Me Mediated Through a Form</h2>
+                <article id = "form-a">
+                    <form action = 'https://atdpsites.berkeley.edu/test.php'> 
+                        <label for = "name">What is your name?</label><br>
+                        <input type = 'text' id = "name" name = 'name'><br>
+                        <label for = 'age'>How old are you?</label><br>
+                        <input type = 'number' id = 'age' name = 'age' min="13" max="18">
+                        <p>How many coding languages do you know?</p>
+                        <input type = 'radio' id = "2" name = '2' value = '2'>
+                        <label for = "2">2</label><br>
+                        <input type = 'radio' id = "3" name = '3' value = '3'>
+                        <label for = "3">3</label><br>
+                        <input type = 'radio' id = "4" name = '4' value = '4'>
+                        <label for = "4">4</label><br>
+                        <input type = 'radio' id = "5" name = '5' value = '5'>
+                        <label for = "5">5</label><br>
+                        <input type = 'radio' id = "6" name = '6' value = '6'>
+                        <label for = "6">6</label><br>
+                        <input type = 'radio' id = "7" name = '7' value = '7'>
+                        <label for = "7">7</label><br>
+                        <input type = 'radio' id = "8" name = '8' value = '8'>
+                        <label for = "8">8</label><br>
+                        <p>Which web development languages do you know?</p>
+                        <input type = 'checkbox' id = 'html' name = 'HTML' value = 'HTML'>
+                        <label for = "html">HTML</label><br>
+                        <input type = 'checkbox' id = 'css' name = 'CSS' value = 'CSS'>
+                        <label for = "CSS">CSS</label><br>
+                        <input type = 'checkbox' id = 'js' name = 'JS' value = 'JS'>
+                        <label for = "html">JavaScript</label><br><br>
+                        <label for = 'animal'>What is your favorite animal?</label>
+                        <select id = 'animal' name = 'animal'>
+                            <option value = 'dog'>Dog</option>
+                            <option value = 'cat'>Cat</option>
+                            <option value = 'bear'>Bear</option>
+                            <option value = 'bird'>Bird</option>
+                            <option value = 'horse'>Horse</option>
+                            <option value = 'lion'>Lion</option>
+                            <option value = 'tiger'>Tiger</option>
+                            <option value = 'elephant'>Elephant</option>
+                        </select><br><br>
+                        <label for = 'funfacts'>Some fun facts about yourself:</label><br>
+                        <textarea name = 'funfacts' rows="10" cols = "20"></textarea><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
