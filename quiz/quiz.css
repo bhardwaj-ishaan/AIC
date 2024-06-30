@@ -6,3 +6,7 @@ body{
 p{
     font-weight: bold;
 }
+
+.done{
+    background-color: #e0ffe0;
+}
