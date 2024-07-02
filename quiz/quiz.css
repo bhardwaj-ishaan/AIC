@@ -3,10 +3,15 @@ body{
     text-align: center;
 }
 
+h1{
+    color: navy;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 p{
     font-weight: bold;
 }
 
 .done{
-    background-color: #e0ffe0;
+    background-color: #e0ffe0; 
 }
