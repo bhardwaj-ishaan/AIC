@@ -3,5 +3,4 @@ $(document).ready(() => {
         let inputGroup = $(this).closest('.input-group');
         inputGroup.addClass('done');
     }) 
-        
 })

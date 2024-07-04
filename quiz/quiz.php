@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Ishaan's Quiz</title>
         <link rel="stylesheet" href="quiz.css">
@@ -12,7 +12,7 @@
             include 'header.php';
             addHeader();
         ?>
-        <form action="quiz.php" method="post">
+        <form action="endMessage.php" method="post">
             <h2>FIRST: Biographical Data</h2>
             <label for="name">Name:</label>
             <input required type="text" name="name" id="name" pattern="[A-Za-z ]+">
@@ -31,28 +31,32 @@
             <br>
             <br>
             <label for="ssn">Social Security Number:</label>
-            <input required type="number" name="ssn" id="ssn" min="111111111" max="999999999">
+            <input required type="number" name="ssn" id="ssn" min="100000000" max="999999999">
             <br>
             <br>
             <label for="reddit">Number of times you have used reddit this week:</label>
             <input required type="number" name="reddit" id="reddit" max="5">
             <br>
             <br>
+            <br>
+            <h2>Now, The Real Quiz:</h2>
+            <br>
+            <br>
             <div class="input-group">
-                <label for="social">On a scale of 1 to 10, how social are you?</label>
-                <input required type="range" min="1" max="10" step="1" id="social" name="social" pattern="[1-10]"oninput="rangeValue.innerText = this.value">
+                <label for="social" id="special">On a scale of 1 to 10, how social are you?</label>
+                <input type="range" min="1" max="10" step="1" id="social" name="social" oninput="rangeValue.innerText = this.value">
                 <i id="rangeValue">5</i>
             </div>
             <div class="input-group">
                 <p>Which of the following is the best room: </p>
                 <input required type="radio" id="basic" name="room" value="basic">
-                <label for="basic"><img src="https://www.thespruce.com/thmb/fCAE88wv3KYcLeW5aRwKPsMYbtY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24.HamptonsModernbyChangoCo.-PrimaryBedroom-ff3e8713c3424e96898446759dca9b22.jpg" height="200px" width="300px" alt="basic"></label>
+                <label for="basic"><img src="https://www.thespruce.com/thmb/fCAE88wv3KYcLeW5aRwKPsMYbtY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/24.HamptonsModernbyChangoCo.-PrimaryBedroom-ff3e8713c3424e96898446759dca9b22.jpg" height="200" width="300" alt="basic"></label>
                 <input required type="radio" id="gaming" name="room" value="gaming">
-                <label for="gaming"><img src="https://blog.displate.com/wp-content/uploads/2021/09/img_6138b2beedbd9.jpg" alt="basic" height="200px" width="300px"></label>
+                <label for="gaming"><img src="https://blog.displate.com/wp-content/uploads/2021/09/img_6138b2beedbd9.jpg" alt="basic" height="200" width="300"></label>
                 <input required type="radio" id="royal" name="room" value="royal">
-                <label for="royal"><img src="https://cdn.onekindesign.com/wp-content/uploads/2019/03/Serene-Master-Bedroom-Decorating-Ideas-19-1-Kindesign.jpg" alt="royal" height="200px" width="300px"></label>
+                <label for="royal"><img src="https://cdn.onekindesign.com/wp-content/uploads/2019/03/Serene-Master-Bedroom-Decorating-Ideas-19-1-Kindesign.jpg" alt="royal" height="200" width="300"></label>
                 <input required type="radio" id="crazy" name="room" value="crazy">
-                <label for="crazy"><img src="https://i.dailymail.co.uk/1s/2021/10/18/15/49319597-10103689-The_charming_period_cottage_has_warm_interiors_The_only_baffling-a-24_1634566062975.jpg" alt="weird" height="200px" width="300px"></label>
+                <label for="crazy"><img src="https://i.dailymail.co.uk/1s/2021/10/18/15/49319597-10103689-The_charming_period_cottage_has_warm_interiors_The_only_baffling-a-24_1634566062975.jpg" alt="weird" height="200" width="300"></label>
             </div>
             <div class="input-group">
                 <p>What is your favorite color of clothing?</p>
@@ -105,9 +109,42 @@
                 <input required type="radio" id="once" name="sick" value="once a year">
                 <label for="once">Once a year</label>
                 <input required type="radio" id="never" name="sick" value="almost never">
-                <label for="never">Maybe once every two years</label>
+                <label for="never">Literally Never</label>
                 <input required type="radio" id="now" name="sick" value="now">
                 <label for="now">I am now</label>
+            </div>
+            <div class="input-group">
+                <p>What motivates you?</p>
+                <input required type="radio" id="you" name="motivates" value="yourself proud">
+                <label for="you">Making yourself proud</label>
+                <input required type="radio" id="parent" name="motivates" value="parents proud">
+                <label for="parent">Making your parents proud</label>
+                <input required type="radio" id="cousin" name="motivates" value="cousin">
+                <label for="cousin">Being better than your cousin</label>
+                <input required type="radio" id="people" name="motivates" value="people">
+                <label for="people">Annoying People</label>
+            </div>
+            <div class="input-group">
+                <p>What are you passionate about?</p>
+                <input required type="radio" id="roblox" name="passionate" value="roblox">
+                <label for="roblox">Roblox</label>
+                <input required type="radio" id="php" name="passionate" value="php">
+                <label for="php">PHP</label>
+                <input required type="radio" id="smart" name="passionate" value="smart">
+                <label for="smart">Being Smart</label>
+                <input required type="radio" id="apeople" name="passionate" value="apeople">
+                <label for="apeople">Again, Annoying People</label>
+            </div>
+            <div class="input-group">
+                <p>Who is your role model?</p>
+                <input required type="radio" id="dev" name="role" value="dev">
+                <label for="dev">Dev</label>
+                <input required type="radio" id="yourself" name="role" value="yourself">
+                <label for="yourself">Yourself</label>
+                <input required type="radio" id="sal" name="role" value="sal">
+                <label for="sal">Sal Khan</label>
+                <input required type="radio" id="jojo" name="role" value="jojo">
+                <label for="jojo">JoJo Siwa</label>
             </div>
             <br>
             <br>

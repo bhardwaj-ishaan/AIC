@@ -3,6 +3,16 @@
 
     addHeader();
 
+    echo "<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Ishaan's Quiz</title>
+    <link rel='stylesheet' href='quiz.css'>
+  </head>
+  <body>";
+
+    echo '<br>Your name is: ' . htmlspecialchars($_POST['name']);
+
     if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
         echo '<br>Your email is: ' . htmlspecialchars($_POST['email']);
     } else{
@@ -32,7 +42,7 @@
         $calm = htmlspecialchars($_POST["pressure"]);
         $sick = htmlspecialchars($_POST["sick"]);
     
-        echo  '<br>Your social level can be described as ' . $social . ' out of 10';
+        echo  '<br><br><br>Your social level can be described as ' . $social . ' out of 10';
     
         echo '<br> Your favorite room type is ' . $room;
     
@@ -49,7 +59,6 @@
         echo 'One or more invalid inputs, go back and try again.';
     }
 
-
-
-
+    echo '  </body>
+</html>'
 ?>

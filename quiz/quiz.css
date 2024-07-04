@@ -8,7 +8,20 @@ h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+header{
+    text-align: center;
+    padding: 10px;
+}
+
+header img{
+    height: 50px;
+}
+
 p{
+    font-weight: bold;
+}
+
+#special{ 
     font-weight: bold;
 }
 
