@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
 body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
@@ -6,6 +9,12 @@ body{
 h1{
     color: navy;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2{
+    color: red;
+    font-family: 'Playwrite GB S';
+    font-weight: bold;
 }
 
 header{
@@ -27,4 +36,50 @@ p{
 
 .done{
     background-color: #e0ffe0; 
+}
+
+.warped{
+    background-color: black;
+    color:white;
+    font-family: 'Mouse Memoirs';
+}
+
+.warped .done {
+    background-color: #1f001f;
+}
+
+.warped h1{
+    color: #ffff7f;
+}
+
+.warped h2{
+    color: #00ffff;
+}
+
+
+button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #04AA6D;
+    border-radius: 18px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 16px 32px;
+  }
+  
+button:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.warped button {
+    background-color: black; 
+    color: white;
+    border: 2px solid #fb5592;
+}
+
+.warped button:hover {
+    background-color: #fb5592;
+    color: black;
 }

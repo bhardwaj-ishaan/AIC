@@ -88,7 +88,7 @@
                 <label for="ano">No</label>
                 <input required type="radio" id="little" name="organized" value="a little">
                 <label for="little">A little</label>
-                <input required type="radio" id="idepends" name="organized" value="a confused amount of ">
+                <input required type="radio" id="idepends" name="organized" value="confused">
                 <label for="idepends">It depends</label>
             </div>
             <div class="input-group">
@@ -99,25 +99,25 @@
                 <label for="no">No</label>
                 <input required type="radio" id="alittle" name="pressure" value="a little">
                 <label for="alittle">A little</label>
-                <input required type="radio" id="depends" name="pressure" value="a confused amount of">
+                <input required type="radio" id="depends" name="pressure" value="confused">
                 <label for="depends">It depends</label>
             </div>
             <div class="input-group">
                 <p>How often do you get sick?</p>
-                <input required type="radio" id="lot" name="sick" value="a lot">
+                <input required type="radio" id="lot" name="sick" value="lot">
                 <label for="lot">A lot</label>
-                <input required type="radio" id="once" name="sick" value="once a year">
+                <input required type="radio" id="once" name="sick" value="once">
                 <label for="once">Once a year</label>
-                <input required type="radio" id="never" name="sick" value="almost never">
+                <input required type="radio" id="never" name="sick" value="never">
                 <label for="never">Literally Never</label>
                 <input required type="radio" id="now" name="sick" value="now">
                 <label for="now">I am now</label>
             </div>
             <div class="input-group">
                 <p>What motivates you?</p>
-                <input required type="radio" id="you" name="motivates" value="yourself proud">
+                <input required type="radio" id="you" name="motivates" value="you">
                 <label for="you">Making yourself proud</label>
-                <input required type="radio" id="parent" name="motivates" value="parents proud">
+                <input required type="radio" id="parent" name="motivates" value="parent">
                 <label for="parent">Making your parents proud</label>
                 <input required type="radio" id="cousin" name="motivates" value="cousin">
                 <label for="cousin">Being better than your cousin</label>
@@ -148,7 +148,7 @@
             </div>
             <br>
             <br>
-            <input type="submit">
+            <button>Submit</button>
         </form>        
     </body>
 </html>
