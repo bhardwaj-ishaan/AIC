@@ -8,15 +8,30 @@
             require_once '../config.php';
             session_start();
 
-            if(isset($_POST['players'])){
-                $_SESSION['player'] = $_POST['players'];
-            }
                 try{
-                    if(!$_SESSION['player']){
+                    $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+                    if(isset($_POST['players'])){
+                        $checkPassword = $dbh->prepare("SELECT id, password_hash FROM player WHERE id = :id");
+                        $checkPassword->bindValue(':id', $_POST['players']);
+                        $checkPassword->execute();
+                        $checkPass = $checkPassword->fetch();
+
+                        if(isset($_POST['pass']) && password_verify($_POST['pass'], $checkPass['password_hash'])){
+                            $_SESSION['player'] = $_POST['players'];
+                        } else{
+                            header( "refresh:5;url=signin.php" );
+                            echo 'You\'ll be redirected in about 5 secs, as you submitted a wrong password or no password. To bypass the delay, click <a href="signin.php">here</a>.';
+                            exit;
+                        }
+                        
+                    }
+
+                    if(!isset($_SESSION['player'])){
                         header( "refresh:5;url=signin.php" );
                         echo 'You\'ll be redirected in about 5 secs, as you aren\'t logged in. To bypass the delay, click <a href="signin.php">here</a>.';
+                        exit;
                     }
-                    $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+                
                     $currentPlayer = $dbh->prepare("SELECT name FROM player WHERE id=:playerId");
                     $currentPlayer->bindValue(":playerId", $_SESSION['player']);
                     $currentPlayer->execute();

@@ -17,6 +17,7 @@ if (ini_get("session.use_cookies")) {
 }
 
 echo 'you logged out yippe';
+echo '<br><br><a href="signin.php">Log back in!</a>';
 
 // Finally, destroy the session.
 session_destroy();

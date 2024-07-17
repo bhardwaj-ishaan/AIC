@@ -2,9 +2,10 @@
     require_once '../config.php';
     session_start();
     try{
-        if(!$_SESSION['player']){
+        if(!isset($_SESSION['player'])){
             header( "refresh:5;url=signin.php" );
             echo 'You\'ll be redirected in about 5 secs, as you aren\'t logged in. To bypass the delay, click <a href="signin.php">here</a>.';
+            exit;
         }
         $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
 
@@ -12,8 +13,9 @@
             $newNickname = $_POST['newNickname'];
             $nickVal = $_POST['change'];
 
-            $checkNickId = $dbh->prepare("SELECT id FROM ownership WHERE :nickVal = id");
+            $checkNickId = $dbh->prepare("SELECT id FROM ownership WHERE :nickVal = id AND player_id = :currentPlayerId");
             $checkNickId->bindValue(":nickVal", $nickVal);
+            $checkNickId->bindValue(':currentPlayerId', $_SESSION['player']);
             $checkNickId->execute();
             $checkId = $checkNickId->fetch();
 
@@ -21,10 +23,6 @@
             $checkForOwnership->bindValue(':currentPlayerId', $_SESSION['player']);
             $checkForOwnership->execute();
             $checksForOwnership = $checkForOwnership->fetch(); 
-
-            var_dump($newNickname);
-            var_dump($nickVal);
-            var_dump($checkId);
 
             if(mb_strlen($newNickname) <= 8 && filter_var($nickVal, FILTER_VALIDATE_INT) && $checkId){
                 if($_SESSION['player'] = $checksForOwnership['player_id']){

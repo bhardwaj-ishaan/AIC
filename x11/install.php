@@ -9,7 +9,7 @@ require_once "../config.php";
 try {
     $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
     //create comic table
-    $query = file_get_contents('parkamon.sql');
+    $query = file_get_contents('parkamon2.sql');
     $dbh->exec($query);
     echo "<p>Successfully installed databases</p>";
     //file_get_contents: https://www.php.net/manual/en/function.file-get-contents.php

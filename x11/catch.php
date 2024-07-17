@@ -2,9 +2,10 @@
     session_start();
     require_once '../config.php';
     try{
-        if(!$_SESSION['player']){
+        if(!isset($_SESSION['player'])){
             header( "refresh:5;url=signin.php" );
             echo 'You\'ll be redirected in about 5 secs, as you aren\'t logged in. To bypass the delay, click <a href="signin.php">here</a>.';
+            exit;
         }
         $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
         $getRow = $dbh->prepare("SELECT * FROM parkamon ORDER BY RAND () LIMIT 1");
