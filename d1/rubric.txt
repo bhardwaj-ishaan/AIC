@@ -1,0 +1,8 @@
+If under 70% in over 2 classes, remove person
+If GPA is under 70, remove person
+If 85% or under in Intro to Programming or TIC, remove
+If 80% or under in Programming in Java, remove
+If 75% or under in Network Security, remove
+If 70% or under in AIC, remove
+Now, Order by GPA, Score in AIC, Network Security, Programming in Java, TIC, Intro to Programming
+Keep top 200
